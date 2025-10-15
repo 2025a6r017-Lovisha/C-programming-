@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+   int stu[5]= {1001, 1002 , 1003, 1004};
+    printf("%d",stu[0]);
+    printf("%d",stu[1]);
+    printf("%d",stu[2]);
+    printf("%d",stu[3]);
+    printf("%d",stu[4]);
+  
+   
+    return 0;
+}
