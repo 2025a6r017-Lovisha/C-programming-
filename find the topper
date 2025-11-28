@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+struct Marks{
+    int math;
+    int science;
+    int english;
+    int computer;
+};
+struct Student{
+    int roll;
+    char name[50];
+    struct Marks m;
+    int total;
+}; 
+int main(){
+    int N;
+    scanf("%d", &N);
+    
+    
+     struct Student s[N];
+    int i,topperIndex=0;
+    for(int i=0; i<N; i++){
+        scanf("%d ", &s[i].roll);
+        gets(s[i].name);
+        
+        scanf("%d", &s[i].m.math);
+        scanf("%d", &s[i].m.science);
+        scanf("%d",  &s[i].m.english);
+        scanf("%d", &s[i].m.computer);
+        s[i].total=s[i].m.math+s[i].m.science+s[i].m.english+s[i].m.computer;
+        if(i==0 || s[i].total>=s[topperIndex].total){
+            topperIndex=i;
+        }
+    }
+        printf("Topper Details:\n");
+        printf("Roll No: %d\n", s[topperIndex].roll);
+        printf("Name: %s\n", s[topperIndex].name);
+        printf("Total Marks: %d", s[topperIndex].total);
+    
+    
+    
+    
+    
+    
+
+      
+    return 0;
+}
